@@ -1,0 +1,22 @@
+#include<iostream>
+#include<array>
+using namespace std;
+int main()
+{
+    array<int,4> a={1, 2, 3, 4}; // declaration
+    int size=a.size();
+    for(int i=0;i<size;i++)
+    {
+        cout<<a[i]<<" ";
+    }
+    cout<<endl;
+    
+    cout<<"element at second index : "<<a.at(2)<<endl; // for printing element at a particular position/index
+    
+    cout<<"empty or not : "<<a.empty()<<endl; // for checking the given array is empty or not
+    
+    cout<<"first element : "<<a.front()<<endl; // for printing first element of array
+    cout<<"last element : "<<a.back()<<endl; // for printing last element of array
+
+    return 0;
+}
