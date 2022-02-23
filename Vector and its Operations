@@ -1,0 +1,53 @@
+#include<iostream>
+#include<vector>
+using namespace std;
+int main()
+{
+    vector<int> v; // declaration & initialization
+    cout<<"capacity : "<<v.capacity()<<endl; // capacity of vector to allocate how much memory space
+    
+    v.push_back(1); // add element in the last
+    cout<<"capacity : "<<v.capacity()<<endl;
+    v.push_back(2);
+    cout<<"capacity : "<<v.capacity()<<endl;
+    v.push_back(3);
+    cout<<"capacity : "<<v.capacity()<<endl;
+    v.push_back(4);
+    cout<<"capacity : "<<v.capacity()<<endl;
+    
+    cout<<"size : "<<v.size()<<endl; // size of vector
+    
+    cout<<"element at second index : "<<v.at(2)<<endl;
+    
+    cout<<"first element : "<<v.front()<<endl;
+    cout<<"last element : "<<v.back()<<endl;
+    
+    cout<<"before pop : "<<endl;
+    for(int i:v)
+    {
+        cout<<i<<" ";
+    }
+    cout<<endl;
+    
+    v.pop_back(); // it removes last element of array
+    cout<<"after pop : "<<endl;
+    for(int i:v)
+    {
+        cout<<i<<" ";
+    }
+    cout<<endl;
+    
+    cout<<"before clear size : "<<v.size()<<endl;
+    v.clear();
+    cout<<"after clear size : "<<v.size()<<endl;
+    
+    vector<int> a(5, 1); // another initialization method of vector with its size and values
+    vector<int> last(a); // copy vector
+    cout<<"print last"<<endl;
+    for(int i:last)
+    {
+        cout<<i<<" ";
+    }
+
+    return 0;
+}
